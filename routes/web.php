@@ -19,6 +19,7 @@ Route::get('/', function () {
 Route::prefix('/user')->group(function(){
     Route::any('user','UserController@user');
     Route::any('redis','UserController@redis');
+    Route::any('adk','UserController@adk');
 });
 Auth::routes();
 

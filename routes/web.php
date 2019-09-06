@@ -12,6 +12,7 @@
 */
 
 Route::get('/', function () {
+	
     return view('welcome');
 });
 
@@ -19,3 +20,6 @@ Route::prefix('/user')->group(function(){
     Route::any('user','UserController@user');
     Route::any('redis','UserController@redis');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -24,3 +24,8 @@ Route::prefix('/user')->group(function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::prefix('/lucky')->group(function(){
+    Route::get('lucky','LuckyController@lucky');
+    Route::get('btn','LuckyController@btn');
+});
